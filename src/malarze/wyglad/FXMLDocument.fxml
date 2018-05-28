@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" onMouseDragged="#przesuniecie" onMousePressed="#wcisniecie" onMouseReleased="#puszczenie" prefHeight="600.0" prefWidth="700.0" styleClass="background" stylesheets="@motyw.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="malarze.wyglad.FXMLDocumentController">
+   <children>
+      <ComboBox fx:id="lista" prefWidth="200.0" styleClass="combobox" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <Label fx:id="opis" prefHeight="45.0" prefWidth="600.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+      <HBox layoutX="215.0" spacing="10.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#poprzedni" text="Poprzedni" />
+            <Button mnemonicParsing="false" onAction="#nastepny" text="Następny" />
+         </children>
+      </HBox>
+      <StackPane AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <ImageView fx:id="obraz" fitHeight="388.0" fitWidth="640.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
